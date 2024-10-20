@@ -6,7 +6,7 @@ function Read() {
   const [movies, setMovies] = useState([]);
   {/**Using useEffect to get API*/}
   useEffect(() => {
-    axios.get('<my_api_url>')
+    axios.get('https://jsonblob.com/api/jsonblob/1287718524221775872')
       .then((response) => {
         setMovies(response.data.movies);
       })
