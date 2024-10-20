@@ -1,10 +1,8 @@
-// create.js
-
 import { useState } from "react";
 
 function Create() {
   const [title, setTitle] = useState('');
-
+  {/**Creating event handle */}
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(title);
@@ -16,6 +14,7 @@ function Create() {
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label>Add Movie Title: </label>
+          {/**Adding inputs */}
           <input type="text"
             className="form-control"
             value={title}
