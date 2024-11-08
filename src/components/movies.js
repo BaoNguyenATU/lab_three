@@ -1,6 +1,6 @@
 import MovieItem from "./movieitem";
-
-function Movies() {
+import { useState } from "react";
+function Movies(props) {
     {/**State for moviess and posrtr URL */}
     const [year, setYear] = useState('');
     const [poster, setPoster] = useState('');
@@ -11,15 +11,8 @@ function Movies() {
       console.log(year);
       console.log(poster);
     }
-}
 
-const Movies = (props)=>{
-    return props.myMovies.map(
-        (movie)=>{
-            return <MovieItem mymovie={movie} key={movie.imdbID} />
-        }
-    );
-}
+
 
 return (
     <div>
@@ -52,5 +45,5 @@ return (
       )}
     </div>
   );
-
+}
 export default Movies;

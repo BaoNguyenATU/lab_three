@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 
 function Create() {
   const [title, setTitle] = useState('');
@@ -6,6 +7,11 @@ function Create() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(title);
+
+    {/**Explain, movie added */}
+    axios.post('http://localhost:4000/api/movies', movie)
+    .then()
+    .catch();
   }
 
   return (
